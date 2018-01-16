@@ -5024,6 +5024,15 @@
         "tools/tojs/creator_camera.ini", 
         "tools/tojs/creator_graphics.ini", 
         "tools/tojs/creator_physics.ini", 
-        "tools/tojs/genbindings.py"
+        "tools/tojs/genbindings.py",
+
+        "copra/copra.h",
+        "copra/cp_test.h",
+        "copra/cp_test.cpp",
+        "copra/cp_util.hpp",
+        "copra/cp_util.cpp",
+        "copra/jsb_copra_auto.hpp",
+        "copra/jsb_copra_auto.cpp",
+        "copra/api/jsb_copra_auto_api.js"
     ]
 }

@@ -89,6 +89,10 @@
 
 #include "cocos2d.h"
 
+//copra{
+#include "copra/jsb_copra_auto.hpp"
+//copra}
+
 using namespace cocos2d;
 
 static bool run_prepare_script(se::Object* global)
@@ -195,6 +199,10 @@ bool jsb_register_all_modules()
 
     // run_boot_script has to be at last.
     se->addRegisterCallback(run_boot_script);
+    
+    //copra{
+    se->addRegisterCallback(register_all_cp);
+    //copra}
 
     se->addAfterCleanupHook([](){
         PoolManager::getInstance()->getCurrentPool()->clear();
