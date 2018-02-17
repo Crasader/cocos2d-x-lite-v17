@@ -6,3 +6,7 @@
 //
 
 #include "cp_util.hpp"
+
+int copra::doubleNumber(int n){
+    return n << 1;
+}

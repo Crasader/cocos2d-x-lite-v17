@@ -22,6 +22,11 @@
 #include "scripting/js-bindings/manual/jsb_module_register.hpp"
 #include "scripting/js-bindings/manual/jsb_global.h"
 
+//copra{
+#include "copra/jsb_copra_auto.hpp"
+#include "copra/jsb_copra_mannual.hpp"
+//copra}
+
 static bool reloadScript(const string& file)
 {
     auto director = cocos2d::Director::getInstance();
@@ -168,6 +173,12 @@ bool RuntimeJsImpl::initJsEnv()
     });
 
     jsb_register_all_modules();
+    
+        //copra{
+        se->addRegisterCallback(register_all_cp);
+        se->addRegisterCallback(register_all_cp_mannually);
+        //copra}
+
     
     se->addRegisterCallback(register_FileUtils);
     se->start();

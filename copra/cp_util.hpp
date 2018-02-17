@@ -10,4 +10,8 @@
 
 #include <stdio.h>
 
+namespace copra {
+    int doubleNumber(int n);
+}
+
 #endif /* cp_util_hpp */
